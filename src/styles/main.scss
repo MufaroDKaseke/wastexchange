@@ -3,3 +3,152 @@
 @import 'variables';
 @import 'base';
 @import 'mixins';
+
+// Preloader
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+// Header
+@import 'header';
+
+// Footer
+@import 'footer';
+
+#circleBg {
+  position: fixed;
+  top: -50px;
+  right: -200px;
+  background-color: $primary;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#circleBg2 {
+  position: fixed;
+  top: -50px;
+  right: -200px;
+  background-color: $color-4;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 0;
+  }
+
+@media only screen and (min-width: $breakpoint-md) {
+  #circleBg {
+    width: 750px;
+    height: 750px;
+  }
+
+  #circleBg2 {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+// Hero
+.hero {
+  
+  > .container > .row {
+    min-height: 100vh;
+  }
+
+  @media only screen and (max-width: $breakpoint-md) {
+    background: $color-1;
+  }
+  
+  /* @media only screen and (max-width: $breakpoint-md) {
+    > .container > .row {
+      position: relative;
+      
+      > div:nth-of-type(1) {
+        opacity: .8;
+      }
+      
+      > div:nth-of-type(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        align-content: center;
+        align-self: center;
+      }
+    }
+  } */
+
+  &-info {
+    
+    @media only screen and (max-width: $breakpoint-md) {
+      h1, p {
+        text-align: center;
+        color: $white;
+      }
+    }
+  }
+  
+  &-graphics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-ui {
+    background-color: $white;
+    width: 200px;
+    aspect-ratio: 9 / 19;
+    border: 5px solid $black;
+    border-radius: 10px;
+    transform: rotate(30deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 1.5rem;
+      //transform: rotate(-30deg);
+    }
+
+    @media only screen and (max-width: $breakpoint-md) {
+      width: 80px;
+
+      i {
+
+      }
+    }
+  }
+  
+}
+
+
+/* About */
+.about {
+
+  &-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  &-img {
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0px $primary;
+  }
+}
+

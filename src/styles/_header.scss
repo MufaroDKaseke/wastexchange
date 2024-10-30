@@ -1,0 +1,52 @@
+// Header
+
+#header {
+  //padding: .5rem 2rem;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    //padding: .5rem .5rem;
+  }
+
+  .nav-item {
+    padding: .25rem 1rem;
+    font-size: .9rem;
+  }
+  .nav-link {
+    padding: .25rem .5rem;
+    &.active, &:hover {
+      border-bottom: 2px solid $color-3;
+      font-weight: 500;
+      transition: border .2s ease-in-out;
+    }
+  }
+
+  .navbar-toggler {
+    font-size: 1.5rem;
+    border: none;
+    
+    &:hover, &:active {
+      outline: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    i {
+      align-self: center;
+    }
+  }
+
+  .offcanvas {
+    &.show {
+    }
+  }
+
+  .header-download {
+    
+
+    @media only screen and (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}

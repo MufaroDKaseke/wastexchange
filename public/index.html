@@ -7,23 +7,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
+  <script src="/node_modules/wow.js/dist/wow.min.js"></script>
   <link rel="stylesheet" href="/node_modules/@flaticon/flaticon-uicons/css/all/all.css">
   <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/dist/css/main.min.css">
 </head>
 <body>
+  
+  <!-- Preloader -->
+  <div class="preloader bg-primary d-flex align-items-center justify-content-center">
+    <i class="fi fi-ss-recycle-bin text-white"></i>
+  </div>
+  <!-- End Of Preloader -->
 
-  <nav id="header" class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+  <!-- Fixed Backgrounds -->
+  <div id="circleBg" class=""></div>
+  <div id="circleBg2" class=""></div>
+  <!-- End Of Fixed Backgrounds -->
+  
+  <!-- Header -->
+  <nav id="header" class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <div class="container align-items-center">
       <a class="navbar-brand" href="#">WasteXchange</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      
+      <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
+        <ul class="navbar-nav mx-md-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -33,23 +44,74 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
         </ul>
       </div>
-      <a href="#" class="btn btn-primary fw-bold">Download</a>
+      <a href="#" class="header-download btn btn-sm btn-primary fw-bold"><i class="fi fi-rr-download me-2"></i>Download</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
+        <i class="fi fi-br-bars-staggered"></i>
+      </button>
     </div>
   </nav>
-
-  <h1>Heading 1</h1>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi fugiat cupiditate dolor incidunt sit quas.</p>
-
-  <button class="btn btn-primary">Button</button>
-
-
+  <!-- End Of Header -->
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 order-md-1 d-none d-md-block">
+            <div class="hero-graphics">
+              <div class="hero-ui animate__animated animate__fadeIn">
+                <i class="fi fi-ss-recycle-bin text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="hero-info">
+              <h1 class="animate__animated animate__fadeInUp">Coming Soon</h1>  
+              <p class="animate__animated animate__fadeInDown">Lorem jpsum dolor sit amet, consecteur adipisicing elit. Excepturi fugiat cupiditate dolor incidunt sit quas.</p>
+              <div class="text-center text-md-start  animate__animated animate__fadeInDown">
+                <a href="#" class="btn btn-light">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="about-graphics p-3">
+              <img src="./assets/img/pc_waste.jpg" alt="" class="about-img">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about-info p-3">
+              <h2>What we do?</h2>
+              <hr class="w-25">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis rem ad illo hic neque.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of About Section -->
+  </main>
+  
+  <footer id="footer">
+    <p class="small text-center text-white py-2"><i class="fi fi-rr-copyright text-primary"></i> Copyright 2024</p>
+  </footer>
+  
+  
+  
+  
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/src/js/main.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>
