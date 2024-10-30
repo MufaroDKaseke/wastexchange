@@ -1,0 +1,1 @@
+sass --watch src/styles/custom.scss:dist/css/bootstrap.min.css src/styles/main.scss:dist/css/main.min.css --style=compressed
