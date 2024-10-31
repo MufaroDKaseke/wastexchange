@@ -67,6 +67,7 @@
 
 // Hero
 .hero {
+  background-color: lighten($primary, 50%);
   
   > .container > .row {
     min-height: 100vh;
