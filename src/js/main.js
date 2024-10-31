@@ -6,9 +6,7 @@ const preloader = $('.preloader');
 const header = $('#header');
 // Prelosder
 $(window).on('load', () => {
-  preloader.fadeOut('slow', () => {
-    preloader.remove();
-  });
+  
 });
 
 $(window).scroll(function() {
@@ -32,4 +30,9 @@ $(window).scroll(function() {
       circleBg2.css('opacity', 1);
     });
   }
+});
+
+// Reset features hover
+$('.features-container').on('hover', (e) => {
+  $('.features-container').removeClass('active');
 });

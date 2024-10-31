@@ -119,6 +119,8 @@
   } */
   
   &-info {
+
+
     
     @media only screen and (max-width: $breakpoint-md) {
       h1, p {
@@ -220,7 +222,7 @@
     border-radius: 20px;
     width: 50%;
     border-radius: 50%;
-    box-shadow: 5px 5px 0px $primary;
+    box-shadow: 5px 5px 0px lighten($primary, 30%);
     
     @media only screen and (max-width: $breakpoint-md) {
       width: 65%;
@@ -230,7 +232,6 @@
   
   
   &-info {
-    
     
     @media only screen and (max-width: $breakpoint-md) {
       text-align: center;
@@ -244,6 +245,7 @@
 
 /* Features */
 .features {
+  padding: 5rem 0;
   
   &-container {
     border: 1px solid lighten($color-4, 30%);
@@ -266,9 +268,11 @@
       font-weight: 400;
     }
     
-    &:hover {
+    &:hover, &.active {
+      padding: 2.5rem 1rem;
       background: $primary;
       color: $white;
+      cursor: pointer;
       transition: all .5s ease-in-out;
       
       i, h4, p {

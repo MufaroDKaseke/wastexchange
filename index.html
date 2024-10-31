@@ -6,9 +6,8 @@
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/node_modules/@flaticon/flaticon-uicons/css/all/all.css">
   <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
   <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
@@ -48,7 +47,7 @@
             <a href="#" class="btn btn-primary fw-bold d-md-none w-100 mt-4"><i class="fi fi-rr-download me-2"></i>Download</a>
           </li>
         </ul>
-
+        
       </div>
       <a href="#" class="header-download btn btn-primary fw-bold"><i class="fi fi-rr-download me-2"></i>Download</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
@@ -66,7 +65,7 @@
             <div class="hero-graphics">
               <div class="hero-ui wow animate__animated animate__fadeIn">
                 <div class="hero-ui-notch"></div>
-                <i class="hero-ui-garbage fi fi-br-recycle"></i>
+                <i class="hero-ui-garbage fi fi-br-recycle wow animate__animated animate__zoomIn" data-wow-duration="2s" data-wow-delay=".2s"></i>
                 <i class="hero-ui-icon fi fi-ss-recycle-bin text-primary animate__bounce"></i>
               </div>
             </div>
@@ -90,14 +89,14 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-6">
             <div class="about-graphics p-3">
-              <img src="./assets/img/pc_waste.jpg" alt="" class="about-img wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay=".3s">
+              <img src="./assets/img/pc_waste.jpg" alt="" class="about-img wow animate__animated animate__zoomIn" data-wow-duration="2s" data-wow-delay=".3s">
             </div>
           </div>
           <div class="col-md-6">
             <div class="about-info p-3">
-              <h2>What we do?</h2>
-              <hr class="w-25 border-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis rem ad illo hic neque.</p>
+              <h2 class="wow animate__animated animate__slideInUp" data-wow-duration="1.75s" data-wow-delay=".3s">What we do?</h2>
+              <hr class="w-25 border-2 wow animate__animated animate__slideInUp" data-wow-duration="1.75s" data-wow-delay=".3s">
+              <p class="wow animate__animated animate__slideInUp" data-wow-duration="1.75s" data-wow-delay=".3s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis rem ad illo hic neque.</p>
             </div>
           </div>
         </div>
@@ -106,25 +105,25 @@
     <!-- End Of About Section -->
     
     <!-- Features -->
-     <section class="features py-5">
+    <section class="features">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-3">
-            <div class="features-container">
+            <div class="features-container wow animate__animated animate__zoomIn" data-wow-duration="1.5s" data-wow-delay=".2s">
               <i class="fi fi-ss-recycle-bin"></i>
               <h4>Feature</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="features-container">
+            <div class="features-container active wow animate__animated animate__zoomIn" data-wow-duration="1.5s" data-wow-delay=".1s">
               <i class="fi fi-ss-recycle-bin"></i>
               <h4>Feature</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="features-container">
+            <div class="features-container wow animate__animated animate__zoomIn" data-wow-duration="1.5s" data-wow-delay=".2s">
               <i class="fi fi-ss-recycle-bin"></i>
               <h4>Feature</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
@@ -132,8 +131,8 @@
           </div>
         </div>
       </div>
-     </section>
-     <!-- End Of Features -->
+    </section>
+    <!-- End Of Features -->
     
     
   </main>
@@ -151,8 +150,13 @@
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/src/js/main.js"></script>
   <script>
+    
+    $(document).ready(function () {
 
-    $(document).ready(function() {
+      preloader.fadeOut('slow', () => {
+        preloader.remove();
+      });
+
       new WOW().init();
     });
   </script>
