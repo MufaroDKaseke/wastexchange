@@ -1,3 +1,5 @@
+// Resets
+$(window).scrollTop(0);
 
 // DOM elements
 const preloader = $('.preloader');

@@ -2,9 +2,18 @@
 
 #footer {
   background-color: $black;
-
-  p {
-    margin-bottom: 0;
-    vertical-align: middle;
+  font-size: .8rem;
+  
+  i {
+    margin-right: .5rem;
+    display: inline;
+    
+    &::before {
+      vertical-align: center;
+    }
+  }
+  
+  span {
+    line-height: .8rem;
   }
 }
