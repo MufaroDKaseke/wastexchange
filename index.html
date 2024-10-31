@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
   <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/dist/css/main.min.css">
+  <script src="/node_modules/wow.js/dist/wow.min.js"></script>
 </head>
 <body>
   
@@ -59,7 +60,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-6 order-md-1">
             <div class="hero-graphics">
-              <div class="hero-ui wow animate__animated animate__fadeIn" data-wow-duration="1s">
+              <div class="hero-ui wow animate__animated animate__fadeIn">
                 <div class="hero-ui-notch"></div>
                 <i class="hero-ui-garbage fi fi-br-recycle"></i>
                 <i class="hero-ui-icon fi fi-ss-recycle-bin text-primary animate__bounce"></i>
@@ -70,7 +71,7 @@
             <div class="hero-info">
               <h1 class="animate__animated animate__fadeInUp">Coming Soon!</h1>  
               <p class="animate__animated animate__fadeInDown">Lorem jpsum dolor sit amet, consecteur adipisicing elit. Excepturi fugiat cupiditate dolor incidunt sit quas.</p>
-              <div class="text-center text-md-start  animate__animated animate__fadeIn">
+              <div class="text-center text-md-start animate__animated animate__fadeIn">
                 <a href="#" class="hero-btn btn btn-primary">Button</a>
               </div>
             </div>
@@ -84,7 +85,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-6">
-            <div class="about-graphics p-3">
+            <div class="about-graphics p-3 wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
               <img src="./assets/img/pc_waste.jpg" alt="" class="about-img">
             </div>
           </div>
@@ -99,6 +100,10 @@
       </div>
     </section>
     <!-- End Of About Section -->
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    
+    
   </main>
   
   <footer id="footer">
@@ -110,10 +115,12 @@
   
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/node_modules/wow.js/dist/wow.min.js"></script>
   <script src="/src/js/main.js"></script>
   <script>
-    new WOW().init();
-    </script>
+
+    $(document).ready(function() {
+      new WOW().init();
+    });
+  </script>
 </body>
 </html>

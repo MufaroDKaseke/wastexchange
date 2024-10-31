@@ -1,3 +1,2 @@
 [build]
-command = "cd public && npm install"
-publish = "public/"
+command = "npm install"
