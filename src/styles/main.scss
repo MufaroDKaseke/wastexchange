@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   z-index: 9999;
-
+  
   i {
     font-size: 2rem;
   }
@@ -33,6 +33,9 @@
   height: 500px;
   border-radius: 50%;
   z-index: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: .2s;
 }
 
 #circleBg2 {
@@ -44,14 +47,17 @@
   height: 300px;
   border-radius: 50%;
   z-index: 0;
-  }
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: .22s;
+}
 
 @media only screen and (min-width: $breakpoint-md) {
   #circleBg {
     width: 750px;
     height: 750px;
   }
-
+  
   #circleBg2 {
     width: 400px;
     height: 400px;
@@ -64,17 +70,21 @@
   > .container > .row {
     min-height: 100vh;
   }
-
+  
   @media only screen and (max-width: $breakpoint-md) {
     background: $color-1;
-  }
-  
-  /* @media only screen and (max-width: $breakpoint-md) {
-    > .container > .row {
+    
+    &-btn {
+      background: $white;
+      color: $primary;
+    }
+    
+    >.container>.row {
       position: relative;
       
+      
       > div:nth-of-type(1) {
-        opacity: .8;
+        opacity: .15;
       }
       
       > div:nth-of-type(2) {
@@ -86,8 +96,27 @@
         align-self: center;
       }
     }
+  }
+  
+  /* @media only screen and (max-width: $breakpoint-md) {
+  > .container > .row {
+  position: relative;
+  
+  > div:nth-of-type(1) {
+  opacity: .8;
+  }
+  
+  > div:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  align-content: center;
+  align-self: center;
+  }
+  }
   } */
-
+  
   &-info {
     
     @media only screen and (max-width: $breakpoint-md) {
@@ -104,7 +133,7 @@
     align-items: center;
     justify-content: center;
   }
-
+  
   &-ui {
     background-color: $white;
     width: 200px;
@@ -115,17 +144,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    i {
-      font-size: 1.5rem;
-      //transform: rotate(-30deg);
+    position: relative;
+    
+    @keyframes garbageAnime {
+      0% {
+        transform: translateY(-200px);
+        color: red;
+      }
+      
+      95% {
+        opacity: 1;
+      }
+      
+      100% {
+        transform: translateY(0px);
+        opacity: 0;
+        color: $primary;
+      }
     }
 
+    &-garbage {
+      transform: rotate(-30deg);
+      animation-name: garbageAnime;
+      animation-duration: 2s;
+      animation-delay: 0;
+      animation-timing-function: ease-in;
+      opacity: 0;
+      position: absolute;
+      font-size: 1.5rem;
+    }
+    
+    &-icon {
+      position: absolute;
+      font-size: 2rem;
+      animation-duration: 1.5s;
+      animation-delay: 2s;
+      animation-timing-function: ease-in-out;
+    }
+
+    &-notch {
+      background-color: $black;
+      width: 50%;
+      height: 15px;
+      border-radius: 5px;
+      position: absolute;
+      top: -5px;
+    }
+    
     @media only screen and (max-width: $breakpoint-md) {
-      width: 80px;
-
+      width: 130px;
+      transform: rotate(0deg);
+      
       i {
-
+        
       }
     }
   }
@@ -135,7 +206,7 @@
 
 /* About */
 .about {
-
+  
   &-graphics {
     display: flex;
     justify-content: center;
