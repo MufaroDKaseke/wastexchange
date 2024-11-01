@@ -120,8 +120,8 @@
   } */
   
   &-info {
-
-
+    
+    
     
     @media only screen and (max-width: $breakpoint-md) {
       h1, p {
@@ -224,6 +224,7 @@
     width: 50%;
     border-radius: 50%;
     box-shadow: 5px 5px 0px lighten($primary, 30%);
+    border: 1px solid $primary;
     
     @media only screen and (max-width: $breakpoint-md) {
       width: 65%;
@@ -286,17 +287,41 @@
 /* Contact */
 .contact {
   background: radial-gradient(circle at center, rgb(100, 169, 4) 0, $color-4 100%);
-
+  position: relative;
+  overflow-y: hidden;
+  
+  #circleBg3 {
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
+    background-color: $color-4;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  #circleBg4 {
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
+    background-color: $color-5;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
   &-info {
     padding: 2.5rem;
     background-color: $white;
     border-radius: .5rem;
-
+    
     .nav-item a {
       display: flex;
       align-items: center;
       font-weight: 500;
-
+      
       i {
         &::before {
           vertical-align: middle;
@@ -304,26 +329,26 @@
       }
     }
   }
-
+  
   &-form {
     padding: 2.5rem;
-
+    
     button {
       background: $white;
       color: $primary;
     }
   }
-
+  
   @media only screen and (max-width: $breakpoint-md) {
-
+    
     &-info {
       padding: 1.5rem 1rem;
-
+      
       .nav-item a {
         font-size: .9rem;
       }
     }
-
+    
     &-form {
       padding: 0;
     }
