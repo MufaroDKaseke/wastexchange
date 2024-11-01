@@ -283,3 +283,50 @@
   }
 }
 
+/* Contact */
+.contact {
+  background: radial-gradient(circle at center, rgb(100, 169, 4) 0, $color-4 100%);
+
+  &-info {
+    padding: 2.5rem;
+    background-color: $white;
+    border-radius: .5rem;
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+
+      i {
+        &::before {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  &-form {
+    padding: 2.5rem;
+
+    button {
+      background: $white;
+      color: $primary;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-md) {
+
+    &-info {
+      padding: 1.5rem 1rem;
+
+      .nav-item a {
+        font-size: .9rem;
+      }
+    }
+
+    &-form {
+      padding: 0;
+    }
+  }
+}
+
